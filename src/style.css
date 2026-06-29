@@ -52,6 +52,8 @@
 
 body {
   margin: 0;
+  background-color: #f5f7fb;
+  height: 100vh;
 }
 
 h1,
@@ -293,4 +295,95 @@ code {
     right: 0;
     border-right-color: var(--border);
   }
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  background-color: #f5f7fb;
+}
+
+.product-card {
+  list-style: none;
+  margin: 0;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(149, 157, 165, 0.15);
+}
+
+.product-field {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.product-field p {
+  margin: 0;
+}
+
+.field-label {
+  font-size: 0.85rem;
+  color: #8e94a0;
+  margin-right: 8px;
+  font-weight: 500;
+}
+
+.field-id {
+  font-size: 0.8rem;
+  border-bottom: 1px inherit #eee;
+  padding-bottom: 8px;
+}
+
+.field-name .field-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1a1f2c;
+}
+
+.field-price {
+  margin-top: auto; 
+  background: #eefaf2;
+  padding: 10px;
+  border-radius: 6px;
+  justify-content: space-between;
+}
+
+.field-price .field-label {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.field-price .field-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #219653;
+}
+
+.field-description {
+  flex-direction: column;
+  margin-top: 8px;
+}
+
+.field-description .field-label {
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.field-description .field-value {
+  color: #4a5468;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }

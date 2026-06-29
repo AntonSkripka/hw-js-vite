@@ -1,8 +1,22 @@
-<div class="menu">
-  <h3 class="menu-title">{{title}}</h3>
-  <ul class="menu-list">
-    {{#each items}} 
-    <li class="menu-item">{{this}}</li> 
-    {{/each}}
+<div class="products-grid">
+  {{#each this}}
+  <ul class="product-card">
+    <li class="product-field field-id">
+      <span class="field-label">ID:</span>
+      <p class="field-value">{{ id }}</p>
+    </li>
+    <li class="product-field field-name">
+      <span class="field-label">Name:</span>
+      <p class="field-value">{{ name }}</p>
+    </li>
+    <li class="product-field field-price">
+      <span class="field-label">Price:</span>
+      <p class="field-value">{{ price }}</p>
+    </li>
+    <li class="product-field field-description">
+      <span class="field-label">Description:</span>
+      <p class="field-value">{{ description }}</p>
+    </li>
   </ul>
+  {{/each}}
 </div>
